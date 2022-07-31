@@ -1,2 +1,2 @@
 # Remind-Me
-Remember everything!
+Forget forgetting!
