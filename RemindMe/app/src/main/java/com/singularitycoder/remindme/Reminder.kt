@@ -1,8 +1,8 @@
 package com.singularitycoder.remindme
 
 data class Reminder(
-    val id: Long,
     val name: String,
     val date: String,
-    val time: String
+    var time: String = "",
+    var countDownTime: Long = 0L
 )

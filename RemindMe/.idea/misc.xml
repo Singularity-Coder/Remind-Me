@@ -8,8 +8,8 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.14150943396226415" />
         <entry key="app/src/main/res/layout/fragment_completed_reminders.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/fragment_pending_reminders.xml" value="0.19610507246376813" />
-        <entry key="app/src/main/res/layout/fragment_reminders.xml" value="0.15384615384615385" />
-        <entry key="app/src/main/res/layout/list_item_reminder.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/fragment_reminders.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/list_item_reminder.xml" value="0.335" />
       </map>
     </option>
   </component>

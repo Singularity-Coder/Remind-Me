@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Remind Me</string>
+    <string name="app_title">Forget Forgetting</string>
+    <string name="app_title_2">Remember Everything</string>
 </resources>

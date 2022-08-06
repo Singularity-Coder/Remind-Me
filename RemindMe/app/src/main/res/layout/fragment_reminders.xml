@@ -13,7 +13,6 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
         android:backgroundTint="@color/black_50"
         app:cardCornerRadius="24dp"
         app:cardElevation="0dp"
@@ -39,7 +38,7 @@
     </com.google.android.material.card.MaterialCardView>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_contacts"
+        android:id="@+id/rv_reminders"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
@@ -48,19 +47,8 @@
         app:layout_constraintTop_toBottomOf="@+id/card_search"
         tools:listitem="@layout/list_item_reminder" />
 
-    <ProgressBar
-        android:id="@+id/progress_circular"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible" />
-
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card_add_reminder"
+        android:id="@+id/card_add_reminder_parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -77,7 +65,7 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/et_skill"
+                android:id="@+id/et_reminder"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="24dp"
@@ -85,17 +73,18 @@
                 android:background="@null"
                 android:enabled="true"
                 android:hint="Add Reminder"
-                android:inputType="textCapWords"
+                android:inputType="textCapSentences"
                 android:maxLines="1"
+                android:maxLength="100"
                 android:textColor="@color/title_color"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/card_add_skill"
+                app:layout_constraintEnd_toStartOf="@+id/card_add_reminder"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card_add_skill"
+                android:id="@+id/card_add_reminder"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="6dp"
@@ -107,7 +96,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageButton
-                    android:id="@+id/ib_add_skill"
+                    android:id="@+id/ib_add_reminder"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:background="@null"
