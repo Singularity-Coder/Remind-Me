@@ -18,6 +18,7 @@ class RemindersFragment : Fragment() {
 
     // TODO Notification + Alaram
     // TODO Notification will have stop reminder which stops the alaram
+    // TODO search filter - filter by date and time
 
     companion object {
         @JvmStatic
