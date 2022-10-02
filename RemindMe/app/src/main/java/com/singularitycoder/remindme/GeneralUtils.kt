@@ -14,11 +14,10 @@ import java.text.SimpleDateFormat
 import java.util.*
 import java.util.concurrent.TimeUnit
 
-
 const val DB_REMINDER = "db_reminder"
 const val TABLE_REMINDER = "table_reminder"
 
-val remindersTabNamesList = listOf("Pending", "Completed")
+val remindersTabNamesList = listOf("Pending", "Repeating", "Completed")
 
 fun View.showSnackBar(
     message: String,

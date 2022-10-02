@@ -25,18 +25,12 @@ class MainActivity : AppCompatActivity() {
     private fun setUpViewPager() {
         binding.viewpagerReminders.adapter = RemindersViewPagerAdapter(fragmentManager = supportFragmentManager, lifecycle = lifecycle)
         TabLayoutMediator(binding.tabLayoutReminders, binding.viewpagerReminders) { tab, position ->
-            tab.text = when (position) {
-                0 -> remindersTabNamesList.first()
-                else -> remindersTabNamesList[1]
-            }
+            tab.text = remindersTabNamesList[position]
         }.attach()
     }
 
     inner class RemindersViewPagerAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) : FragmentStateAdapter(fragmentManager, lifecycle) {
         override fun getItemCount(): Int = remindersTabNamesList.size
-        override fun createFragment(position: Int): Fragment = when (position) {
-            0 -> RemindersFragment.newInstance(remindersTabNamesList.first())
-            else -> RemindersFragment.newInstance(remindersTabNamesList[1])
-        }
+        override fun createFragment(position: Int): Fragment = RemindersFragment.newInstance(remindersTabNamesList[position])
     }
 }
